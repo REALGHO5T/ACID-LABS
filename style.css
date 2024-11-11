@@ -60,7 +60,6 @@ body {
 :root {
   --green: #61e294;
   --purple:#a115e7;
-  --bg-color: #e8eee5;
   --vemka: "Conflict";
   --acid: "Acid";
   --montreal: "Montreal";
@@ -80,6 +79,7 @@ h1 {
   text-transform: uppercase;
   font-family: var(--founders);
   line-height: 70px;
+  pointer-events: none;
 }
 
 p {
@@ -254,8 +254,8 @@ a {
     font-family: var(--founders);
     text-transform: uppercase;
     white-space: nowrap;
-    line-height: 80px;
-    /* animation: marquee 10000ms linear infinite; */
+    line-height: 70px;
+    animation: marquee 10000ms linear infinite;
   }
 }
 
@@ -318,7 +318,7 @@ a {
       left: 0;
       height: 100%;
       width: 100%;
-      background: radial-gradient(#0000001f, #000000 60%);
+      background:radial-gradient(#00000058, #000000 60%);
       z-index: 10;
     }
   }
@@ -366,17 +366,17 @@ a {
         align-items: center;
 
         .icon {
-          height: 7vh;
-          width: 7vh;
+          height: 8vh;
+          width: 8vh;
         }
-        h1 {
-          font-size: 5rem;
-          position: relative;
-          background: linear-gradient(30deg,#e536ab,#5c03bc, #e875ff);
-          background-clip: text;
-          color: transparent;
-          -webkit-background-clip: text;
-        }
+      }
+      h1 {
+        font-size: 5rem;
+        position: relative;
+        background: linear-gradient(30deg,#e536ab,#5c03bc, #e875ff);
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
       }
     }
   }
@@ -387,7 +387,7 @@ a {
   background-color: #6a2189;
   transform: rotate(-5deg) translateX(-100px);
   margin-top: 10vh;
-  /* span{animation: marquee 10000ms reverse infinite;} */
+  span{animation: marquee 10000ms linear reverse infinite;}
 }
 
 /*  WORK SECTION */
@@ -474,4 +474,26 @@ footer {
       }
     }
   }
+}
+
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--purple);
+  border-radius: 10px;
+  width: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
