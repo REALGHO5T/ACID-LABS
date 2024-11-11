@@ -409,8 +409,8 @@ a {
     margin-top: 5vh;
 
     .work {
-      height: 60vh;
-      background-color: #b47aea;
+      height: 80vh;
+      /* background-color: #b47aea; */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -419,8 +419,6 @@ a {
 
       img {
         object-position: top;
-        height: 96%;
-        width: 96%;
       }
     }
   }

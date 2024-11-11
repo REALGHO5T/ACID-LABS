@@ -25,5 +25,5 @@ function pageview() {
 }
 
 pageview();
-lenis();
+// lenis();
 
