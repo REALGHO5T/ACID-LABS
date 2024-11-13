@@ -15,7 +15,8 @@
   src: url(./Fonts/ClashDisplay-Medium.ttf);
 }
 /* LENIS CSS */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 
@@ -59,7 +60,7 @@ body {
 
 :root {
   --green: #61e294;
-  --purple:#a115e7;
+  --purple: #a115e7;
   --vemka: "Conflict";
   --acid: "Acid";
   --montreal: "Montreal";
@@ -117,7 +118,7 @@ a {
   }
 }
 .btn:hover {
-  background-color:var(--green);
+  background-color: var(--green);
   color: black;
   transition: all 0.3s ease;
 }
@@ -241,21 +242,27 @@ a {
 
 /* MARQUEE SECTION */
 .marquee-section {
-  padding: 1vh 0vh;
   margin-top: 20vh;
-  width: 150%;
+  width: 100%;
+  overflow: hidden;
   background-color: #0ab04c;
-  display: flex;
-  gap: 5vh;
-  transform: rotate(5deg) translateX(-100px);
+  transform: rotate(5deg) translateX(10px);
+  
+  .marquee {
+    width: 150%;
+    padding: 1vh 0vh;
+    display: flex;
+    gap: 5vh;
 
-  span {
-    font-size: var(--heading-size);
-    font-family: var(--founders);
-    text-transform: uppercase;
-    white-space: nowrap;
-    line-height: 70px;
-    animation: marquee 10000ms linear infinite;
+    span {
+      font-size: var(--heading-size);
+      font-family: var(--founders);
+      text-transform: uppercase;
+      white-space: nowrap;
+
+      line-height: 70px;
+      animation: marquee 10000ms linear infinite;
+    }
   }
 }
 
@@ -281,7 +288,7 @@ a {
 
   .about-left {
     height: 100%;
-    max-width:600px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 5vh;
@@ -312,13 +319,13 @@ a {
     position: absolute;
     top: 0;
     right: 0%;
-    .overlay{
+    .overlay {
       position: absolute;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
-      background:radial-gradient(#00000058, #000000 60%);
+      background: radial-gradient(#00000058, #000000 60%);
       z-index: 10;
     }
   }
@@ -373,7 +380,7 @@ a {
       h1 {
         font-size: 5rem;
         position: relative;
-        background: linear-gradient(30deg,#e536ab,#5c03bc, #e875ff);
+        background: linear-gradient(30deg, #e536ab, #5c03bc, #e875ff);
         background-clip: text;
         color: transparent;
         -webkit-background-clip: text;
@@ -385,9 +392,14 @@ a {
 /* MARQUEE SECTION 2 */
 .marquee-2 {
   background-color: #6a2189;
-  transform: rotate(-5deg) translateX(-100px);
+  transform: rotate(-5deg) ;
   margin-top: 10vh;
-  span{animation: marquee 10000ms linear reverse infinite;}
+
+  .marquee{
+    span {
+      animation: marquee 10000ms linear reverse infinite;
+    }
+  }
 }
 
 /*  WORK SECTION */
@@ -475,7 +487,6 @@ footer {
     }
   }
 }
-
 
 ::-webkit-scrollbar {
   width: 3px;
