@@ -56,6 +56,8 @@ body {
 body {
   background-color: #000000;
   overflow-x: hidden;
+  width: 1280px;
+  margin: auto;
 }
 
 :root {
@@ -129,7 +131,7 @@ a {
 
 /* HEADER */
 .header {
-  width: 100%;
+  width: 1280px;
   margin: auto;
   padding: 5px 10rem;
   display: flex;
@@ -139,7 +141,8 @@ a {
   backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
-  left: 0;
+  transform: translate(-50%, 0);
+  left: 50%;
   z-index: 1000;
 
   .logo {
@@ -193,6 +196,10 @@ a {
     height: 100%;
     width: 100%;
     z-index: 1;
+
+    video {
+      filter: brightness(0.9);
+    }
   }
 
   .hero-content {
@@ -206,7 +213,7 @@ a {
     z-index: 100;
 
     h1 {
-      font-size: clamp(5rem, 8vw, 15rem);
+      font-size: clamp(5rem, 8vw, 13rem);
       line-height: 6vw;
     }
 
@@ -247,7 +254,7 @@ a {
   overflow: hidden;
   background-color: #0ab04c;
   transform: rotate(5deg) translateX(10px);
-  
+
   .marquee {
     width: 150%;
     padding: 1vh 0vh;
@@ -343,27 +350,30 @@ a {
 /* SERVICES SECTION */
 .services-section {
   width: 100%;
-  padding: 20px;
+  padding: 1.5rem;
   margin-top: 20vh;
   pointer-events: none;
+
   .services {
+    padding: 5rem 0;
     margin-top: 5vh;
     width: 100%;
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     gap: 2vh;
-    background: radial-gradient(circle at 50%, var(--purple), black 45%);
+    background: radial-gradient(circle at 50%, var(--purple), black 300px);
 
     .service {
       display: flex;
       flex-direction: column;
       gap: 2vh;
       width: 100%;
-      height: 50vh;
+      height: fit-content;
       background-color: #00000051;
       backdrop-filter: blur(30px);
       position: relative;
-      padding: 20px;
+      padding: 4rem 1.5rem;
+      border-radius: 10px;
 
       .service-title {
         width: 100%;
@@ -392,10 +402,10 @@ a {
 /* MARQUEE SECTION 2 */
 .marquee-2 {
   background-color: #6a2189;
-  transform: rotate(-5deg) ;
+  transform: rotate(-5deg);
   margin-top: 10vh;
 
-  .marquee{
+  .marquee {
     span {
       animation: marquee 10000ms linear reverse infinite;
     }
@@ -407,7 +417,7 @@ a {
   width: 100%;
   margin-top: 20vh;
   padding: 20px;
-  background: radial-gradient(circle at 50%, var(--purple), black 50%);
+  background: radial-gradient(circle at 50% 50%, var(--purple), black 50%);
 
   .work-heading {
     width: 100%;
@@ -428,6 +438,8 @@ a {
       align-items: center;
       background-color: #00000072;
       backdrop-filter: blur(30px);
+      border-radius: 10px;
+      overflow: hidden;
 
       img {
         object-position: top;
@@ -440,7 +452,7 @@ a {
 footer {
   height: 70vh;
   width: 100%;
-  background: radial-gradient(circle at 50% 200%, var(--purple), #000000 80%);
+  background: radial-gradient(circle at 50% 990px, var(--purple), #000000 900px);
   margin-top: 20vh;
   position: relative;
   padding: 20px;
@@ -507,4 +519,12 @@ footer {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+@media screen and (min-width: 1400px) {
+  body{
+    width: 160rem;
+  }
+  .header{
+    width: 160rem;
+  }
 }
