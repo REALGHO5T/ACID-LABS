@@ -1,17 +1,5 @@
 function lenis() {
-  // Initialize a new Lenis instance for smooth scrolling
-  const lenis = new Lenis();
-
-  // Listen for the 'scroll' event and log the event data to the console
-  lenis.on("scroll", (e) => {
-    console.log(e);
-  });
-
-  lenis.on("scroll", ScrollTrigger.update);
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000); // Convert time from seconds to milliseconds
-  });
-  gsap.ticker.lagSmoothing(0);
+  const locomotiveScroll = new LocomotiveScroll();
 }
 function pageview() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -27,3 +15,17 @@ function pageview() {
 pageview();
 lenis();
 
+gsap.to(".scroll", {
+  scrollTrigger: {
+    trigger: ".horizon",
+    start: "23% top", // Changed to more standard starting position
+    end: "+=300%", // More precise end point based on scroll distance
+    scrub: 1, // Added smoothing value for more natural scrolling
+    pin: true,
+    anticipatePin: 1, // Added to prevent jerky start
+    invalidateOnRefresh: true, // Added to handle resize events
+    markers: false // Disabled markers for production
+  },
+  x: "-300%",
+  ease: "none" // Changed to none for smoother scrolling
+});
