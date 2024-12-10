@@ -44,7 +44,7 @@ body {
   --acid: "Acid";
   --montreal: "Montreal";
   --text-size: 1.8rem;
-  --heading-size: 8rem;
+  --heading-size: clamp(5rem, 8vw, 8rem);
   --founders: "Founders";
 }
 
@@ -59,7 +59,11 @@ h1 {
   text-transform: uppercase;
   font-family: var(--founders);
   line-height: 70px;
+  background: linear-gradient(45deg, #ebf4f5, #afc6ea);
   pointer-events: none;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 p {
@@ -228,7 +232,6 @@ a {
     }
   }
 }
-
 @keyframes marquee {
   0% {
     transform: translateX(0);
