@@ -1,6 +1,7 @@
 function lenis() {
   const locomotiveScroll = new LocomotiveScroll();
 }
+
 function pageview() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
@@ -24,8 +25,34 @@ gsap.to(".scroll", {
     pin: true,
     anticipatePin: 1, // Added to prevent jerky start
     invalidateOnRefresh: true, // Added to handle resize events
-    markers: false // Disabled markers for production
+    markers: false, // Disabled markers for production
   },
   x: "-300%",
-  ease: "none" // Changed to none for smoother scrolling
+  ease: "none", // Changed to none for smoother scrolling
 });
+
+var tl = gsap.timeline({
+  Scrolltrigger: {
+    trigger: ".hero-section",
+    start: "top top",
+    end: "bottom bottom",
+  },
+});
+
+tl.from(".header .logo, .header .navbar",{
+  y:-100,
+  opacity:0,
+  delay:0.5,
+  scale:0.5,
+  duration:1,
+  stagger:0.1,
+  ease:"power4"
+},"<")
+.from(".hero-content h1, .hero-content .buttons a",{
+  y:100,
+  x:200,
+  opacity:0,
+  duration:.8,
+  stagger:0.1,
+  ease:"power4.out"
+})
