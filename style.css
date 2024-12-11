@@ -44,7 +44,7 @@ body {
   --acid: "Acid";
   --montreal: "Montreal";
   --text-size: 1.8rem;
-  --heading-size: clamp(5rem, 8vw, 8rem);
+  --heading-size: clamp(5rem, 7.5vw, 8.5rem);
   --founders: "Founders";
 }
 
@@ -58,8 +58,8 @@ h1 {
   font-size: var(--heading-size);
   text-transform: uppercase;
   font-family: var(--founders);
-  line-height: 70px;
-  background: linear-gradient(45deg, #ebf4f5, #afc6ea);
+  line-height: 6vw;
+  background: linear-gradient(45deg, #ebf4f5, #8eb5f3);
   pointer-events: none;
   color: transparent;
   background-clip: text;
@@ -70,6 +70,11 @@ p {
   font-size: var(--text-size);
   font-family: var(--montreal);
   font-weight: 500;
+  background: linear-gradient(45deg, #ebf4f5, #afc6ea);
+  pointer-events: none;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 a {
@@ -172,6 +177,11 @@ a {
     text-align: center;
     z-index: 100;
 
+    .masker {
+      height: 0%;
+      width: 100%;
+      overflow: hidden;
+    }
     h1 {
       font-size: clamp(5rem, 8vw, 13rem);
       line-height: 6vw;
@@ -243,7 +253,7 @@ a {
 
 /* ABOUT SECTION */
 .about-section {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   margin-top: 10vh;
   position: relative;
@@ -254,7 +264,7 @@ a {
 
   .about-left {
     height: 100%;
-    max-width: 600px;
+    max-width: 650px;
     display: flex;
     flex-direction: column;
     gap: 5vh;
@@ -266,7 +276,7 @@ a {
       gap: 5vh;
 
       h1 {
-        line-height: 60px;
+        line-height: 5vw;
       }
       .btn {
         width: 25%;
@@ -312,7 +322,16 @@ a {
   padding: 1.5rem;
   margin-top: 20vh;
   pointer-events: none;
-
+  
+  .services-heading{
+    h1 {
+      background: linear-gradient(45deg, #ebf4f5, #003ea1);
+      pointer-events: none;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+  }
   .services {
     padding: 5rem 0;
     margin-top: 5vh;
@@ -342,12 +361,12 @@ a {
         align-items: center;
 
         .icon {
-          height: 8vh;
-          width: 8vh;
+          height: 5vw;
+          width: 5vw;
         }
       }
       h1 {
-        font-size: 5rem;
+        font-size: clamp(4rem, 5vw, 5.5rem);
         position: relative;
         background: linear-gradient(30deg, #e536ab, #5c03bc, #e875ff);
         background-clip: text;
@@ -366,6 +385,63 @@ a {
   .marquee {
     span {
       animation: marquee 10000ms linear reverse infinite;
+    }
+  }
+}
+
+/* CHOOSE US SECTION */
+.choose-us {
+  width: 100%;
+  margin-top: 30vh;
+  padding: 20px;
+  position: relative;
+  background: radial-gradient(circle at 80% 50%, var(--purple), black 250px);
+
+  .choose-us-heading{
+    h1{
+      background: linear-gradient(45deg, #ebf4f5, #003ea1);
+      pointer-events: none;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+  }
+
+  .choose-container {
+    margin-top: 5vh;
+    display: flex;
+    width: 100%;
+    gap: 2vh;
+
+    .choose-box {
+      height: fit-content;
+      flex: auto;
+      text-align: center;
+      background-color: #100f0f96;
+      backdrop-filter: blur(30px);
+      border-radius: 10px;
+      padding: 4rem 1.5rem;
+      border: 1px solid #ffffff38;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4vh;
+
+      .choose-icon {
+        height: 5.5vw;
+        width: 5.5vw;
+      }
+
+      h1 {
+        font-size: clamp(4rem, 5vw, 5.5rem);
+        position: relative;
+        background: linear-gradient(20deg, #e536ab, #5c03bc);
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+        line-height: 4vw;
+      }
     }
   }
 }
@@ -410,7 +486,11 @@ a {
 footer {
   height: 70vh;
   width: 100%;
-  background: radial-gradient(circle at 50% 990px, var(--purple), #000000 900px);
+  background: radial-gradient(
+    circle at 50% 990px,
+    var(--purple),
+    #000000 900px
+  );
   margin-top: 20vh;
   position: relative;
   padding: 20px;
@@ -423,7 +503,6 @@ footer {
     gap: 3vh;
     width: 100%;
     align-items: center;
-    
 
     .buttons {
       gap: 2vh;
@@ -480,10 +559,10 @@ footer {
   background: #555;
 }
 @media screen and (min-width: 1400px) {
-  body{
+  body {
     width: 160rem;
   }
-  .header{
+  .header {
     width: 160rem;
   }
 }

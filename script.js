@@ -1,5 +1,13 @@
 function lenis() {
-  const locomotiveScroll = new LocomotiveScroll();
+  const locomotiveScroll = new LocomotiveScroll({
+    lenisOptions: {
+      // wrapper: window,
+      // content: document.documentElement,
+      lerp: .07,
+      smoothWheel: true,
+      // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+  },
+  });
 }
 
 function pageview() {
@@ -45,14 +53,18 @@ tl.from(".header .logo, .header .navbar",{
   delay:0.5,
   scale:0.5,
   duration:1,
-  stagger:0.1,
+  stagger:0.05,
   ease:"power4"
 },"<")
+.from(".masker",{
+  height:"0%",
+  duration:1
+},"a")
 .from(".hero-content h1, .hero-content .buttons a",{
   y:100,
   x:200,
   opacity:0,
   duration:.8,
-  stagger:0.1,
+  stagger:0.05,
   ease:"power4.out"
-})
+},"a")
