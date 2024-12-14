@@ -44,7 +44,7 @@ body {
   --acid: "Acid";
   --montreal: "Montreal";
   --text-size: 1.8rem;
-  --heading-size: clamp(5rem, 7.5vw, 8.5rem);
+  --heading-size: clamp(5rem, 7.5vw + 4.5vw, 8.5rem);
   --founders: "Founders";
 }
 
@@ -118,7 +118,7 @@ a {
 
 /* HEADER */
 .header {
-  width: 1280px;
+  width: 100%;
   margin: auto;
   padding: 1rem 5rem;
   display: flex;
@@ -253,18 +253,18 @@ a {
 
 /* ABOUT SECTION */
 .about-section {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   margin-top: 10vh;
   position: relative;
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  gap: 5vh;
+  gap: 2vh;
 
   .about-left {
     height: 100%;
-    max-width: 650px;
+    width: 55%;
     display: flex;
     flex-direction: column;
     gap: 5vh;
@@ -307,7 +307,7 @@ a {
   }
   .about-right {
     height: 100%;
-    max-width: 600px;
+    width: 45%;
     z-index: 100;
     display: flex;
     flex-direction: column;
@@ -322,8 +322,8 @@ a {
   padding: 1.5rem;
   margin-top: 20vh;
   pointer-events: none;
-  
-  .services-heading{
+
+  .services-heading {
     h1 {
       background: linear-gradient(45deg, #ebf4f5, #003ea1);
       pointer-events: none;
@@ -397,8 +397,8 @@ a {
   position: relative;
   background: radial-gradient(circle at 80% 50%, var(--purple), black 250px);
 
-  .choose-us-heading{
-    h1{
+  .choose-us-heading {
+    h1 {
       background: linear-gradient(45deg, #ebf4f5, #003ea1);
       pointer-events: none;
       color: transparent;
@@ -533,6 +533,15 @@ footer {
 
       p {
         font-weight: 400;
+        span {
+          font-size: var(--text-size);
+          font-family: var(--acid);
+          background: linear-gradient(45deg, #ebf4f5, #afc6ea);
+          pointer-events: none;
+          color: transparent;
+          background-clip: text;
+          -webkit-background-clip: text;
+        }
       }
     }
   }
@@ -559,10 +568,5 @@ footer {
   background: #555;
 }
 @media screen and (min-width: 1400px) {
-  body {
-    width: 160rem;
-  }
-  .header {
-    width: 160rem;
-  }
+ 
 }
