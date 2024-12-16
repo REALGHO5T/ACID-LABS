@@ -223,7 +223,7 @@ a {
   transform: rotate(5deg) translateX(-10px);
 
   .marquee {
-    width: 100%;
+    width: 150%;
     padding: 1vh 0vh;
     display: flex;
     gap: 5vh;
@@ -235,7 +235,7 @@ a {
       white-space: nowrap;
 
       line-height: 70px;
-      /* animation: marquee 10000ms linear infinite; */
+      animation: marquee 10000ms linear infinite;
     }
   }
 }
@@ -378,7 +378,7 @@ a {
 
   .marquee {
     span {
-      /* animation: marquee 10000ms linear reverse infinite; */
+      animation: marquee 10000ms linear reverse infinite;
     }
   }
 }
@@ -544,23 +544,22 @@ footer {
 ::-webkit-scrollbar {
   width: 3px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: black;
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--purple);
   border-radius: 10px;
   width: 3px;
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+
 @media screen and (max-width: 900px) {
   .about-section {
     flex-direction: column;
@@ -728,7 +727,8 @@ footer {
   .work-section{
     .work-container{
       #work4{
-        display: none;
+        height: 0px;
+        width: 0px;
       }
     }
   }
