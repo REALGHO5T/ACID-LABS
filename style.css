@@ -727,9 +727,12 @@ footer {
   }
   .work-section{
     .work-container{
-      .work:nth-child(3){
+      #work4{
         display: none;
       }
     }
+  }
+  footer{
+    margin-top: 10vh;
   }
 }
