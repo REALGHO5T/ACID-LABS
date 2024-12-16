@@ -495,6 +495,7 @@ footer {
     flex-direction: column;
     gap: 3vh;
     width: 100%;
+    text-align: center;
     align-items: center;
 
     .buttons {
@@ -680,6 +681,7 @@ footer {
   }
   footer{
     .footer-content{
+      text-align: center;
       .btn{
         font-size: 1.5rem;
       }
@@ -693,7 +695,7 @@ footer {
     .hero-content {
       width: 100%;
       h1 {
-        font-size: 5.5rem;
+        font-size: 6rem;
         white-space: wrap;
         line-height: 4.5rem;
       }
@@ -708,4 +710,19 @@ footer {
       }
     }
   }
-}
+  .choose-us{
+
+      .choose-box{
+        height: 30vh;
+        h1{
+          font-size: 4rem;
+          line-height: 3.5rem;
+        }
+        .choose-icon{
+          height: 4rem;
+          width: 4rem;
+        }
+      }
+    }
+  }
+
