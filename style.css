@@ -33,8 +33,6 @@ body {
 body {
   background-color: #000000;
   overflow-x: hidden;
-  width: 1280px;
-  margin: auto;
 }
 
 :root {
@@ -44,7 +42,7 @@ body {
   --acid: "Acid";
   --montreal: "Montreal";
   --text-size: 1.8rem;
-  --heading-size: clamp(5rem, 7.5vw + 4.5vw, 8.5rem);
+  --heading-size: clamp(5rem, 7vw, 10rem);
   --founders: "Founders";
 }
 
@@ -58,7 +56,7 @@ h1 {
   font-size: var(--heading-size);
   text-transform: uppercase;
   font-family: var(--founders);
-  line-height: 6vw;
+  line-height: clamp(4rem, 5vw + 6vw, 7rem);
   background: linear-gradient(45deg, #ebf4f5, #8eb5f3);
   pointer-events: none;
   color: transparent;
@@ -119,7 +117,6 @@ a {
 /* HEADER */
 .header {
   width: 100%;
-  margin: auto;
   padding: 1rem 5rem;
   display: flex;
   justify-content: space-between;
@@ -168,7 +165,7 @@ a {
   }
 
   .hero-content {
-    width: 70%;
+    width: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -183,8 +180,8 @@ a {
       overflow: hidden;
     }
     h1 {
-      font-size: clamp(5rem, 8vw, 13rem);
-      line-height: 6vw;
+      font-size: 9vw;
+      line-height: 6.7vw;
     }
 
     .buttons {
@@ -220,13 +217,13 @@ a {
 /* MARQUEE SECTION */
 .marquee-section {
   margin-top: 20vh;
-  width: 150%;
-  overflow: hidden;
+  width: 100%;
+  overflow-x: hidden;
   background-color: #0ab04c;
   transform: rotate(5deg) translateX(-10px);
 
   .marquee {
-    width: 150%;
+    width: 100%;
     padding: 1vh 0vh;
     display: flex;
     gap: 5vh;
@@ -238,7 +235,7 @@ a {
       white-space: nowrap;
 
       line-height: 70px;
-      animation: marquee 10000ms linear infinite;
+      /* animation: marquee 10000ms linear infinite; */
     }
   }
 }
@@ -275,9 +272,6 @@ a {
       flex-direction: column;
       gap: 5vh;
 
-      h1 {
-        line-height: 5vw;
-      }
       .btn {
         width: 25%;
         font-size: 2rem;
@@ -384,7 +378,7 @@ a {
 
   .marquee {
     span {
-      animation: marquee 10000ms linear reverse infinite;
+      /* animation: marquee 10000ms linear reverse infinite; */
     }
   }
 }
@@ -409,13 +403,13 @@ a {
 
   .choose-container {
     margin-top: 5vh;
-    display: flex;
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
     width: 100%;
     gap: 2vh;
 
     .choose-box {
-      height: fit-content;
-      flex: auto;
+      height: 70vh;
       text-align: center;
       background-color: #100f0f96;
       backdrop-filter: blur(30px);
@@ -466,7 +460,6 @@ a {
 
     .work {
       height: 80vh;
-      /* background-color: #b47aea; */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -567,6 +560,129 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-@media screen and (min-width: 1400px) {
- 
+@media screen and (max-width: 900px) {
+  .about-section {
+    flex-direction: column;
+    .about-left,
+    .about-right {
+      height: fit-content;
+      width: 100%;
+    }
+    .about-left {
+      h1 {
+        font-size: 6rem;
+      }
+    }
+  }
+
+  .choose-us {
+    .choose-container {
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+      .choose-box {
+        height: 50vh;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --text-size: 1.5rem;
+  }
+  .btn {
+    font-size: 1.5rem;
+  }
+  .hero-section {
+    height: 90vh;
+
+    .hero-content {
+      width: 100%;
+      h1 {
+        font-size: 6rem;
+        white-space: nowrap;
+        line-height: 4.5rem;
+      }
+    }
+  }
+  .marquee-section {
+    .marquee {
+      padding: 2px 0;
+      gap: 3vh;
+      span {
+        line-height: 5rem;
+        font-size: 6rem;
+      }
+    }
+  }
+  .about-section {
+    margin-top: 15vh;
+    .about-left,
+    .about-right {
+      gap: 3vh;
+      height: 50%;
+    }
+  }
+  .services-section {
+    .services-heading {
+      h1 {
+        font-size: 6rem;
+        line-height: 4.5rem;
+      }
+    }
+    .services {
+      margin-top: 2vh;
+      grid-template: repeat(4, 1fr) / 1fr;
+      .service {
+        .service-title {
+          .icon {
+            height: 4rem;
+            width: 4rem;
+          }
+        }
+      }
+    }
+  }
+  .marquee-2 {
+    margin-top: 5vh;
+  }
+  .choose-us{
+    margin-top: 15vh;
+    .choose-container{
+      grid-template: repeat(4, 1fr) / 1fr;
+
+      .choose-box{
+        h1{
+          font-size: 5rem;
+          line-height: 4rem;
+        }
+        .choose-icon{
+          height: 4rem;
+          width: 4rem;
+        }
+      }
+    }
+  }
+  .work-section{
+    margin-top: 15vh;
+    .work-heading{
+      h1{
+        font-size: 6rem;
+          line-height: 4.5rem;
+      }
+    }
+    .work-container{
+      grid-template: repeat(4, 1fr) / 1fr;
+      gap: 3vh;
+      .work{
+        height: 100vh;
+      }
+    }
+  }
+  footer{
+    .footer-content{
+      .btn{
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
