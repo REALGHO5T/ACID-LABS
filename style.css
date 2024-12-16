@@ -561,6 +561,9 @@ footer {
 
 
 @media screen and (max-width: 900px) {
+  body{
+    overflow-x: hidden;
+  }
   .about-section {
     flex-direction: column;
     .about-left,
@@ -585,6 +588,9 @@ footer {
   }
 }
 @media screen and (max-width: 500px) {
+  body{
+    overflow-x: hidden;
+  }
   :root {
     --text-size: 1.5rem;
   }
@@ -688,6 +694,9 @@ footer {
   }
 }
 @media screen and (max-width: 400px) {
+  body{
+    overflow-x: hidden;
+  }
   .hero-section {
     height: 90vh;
 
@@ -721,15 +730,6 @@ footer {
           height: 4rem;
           width: 4rem;
         }
-      }
-    }
-  }
-  .work-section{
-    .work-container{
-      .work #work4{
-        height: 0px;
-        width: 0px;
-        display: none;
       }
     }
   }
