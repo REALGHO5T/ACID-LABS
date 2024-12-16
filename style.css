@@ -561,7 +561,7 @@ footer {
 
 
 @media screen and (max-width: 900px) {
-  body{
+  .main{
     overflow-x: hidden;
   }
   .about-section {
@@ -588,7 +588,7 @@ footer {
   }
 }
 @media screen and (max-width: 500px) {
-  body{
+  .main{
     overflow-x: hidden;
   }
   :root {
@@ -694,7 +694,7 @@ footer {
   }
 }
 @media screen and (max-width: 400px) {
-  body{
+  .main{
     overflow-x: hidden;
   }
   .hero-section {
