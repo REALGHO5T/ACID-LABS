@@ -650,6 +650,7 @@ footer {
       grid-template: repeat(4, 1fr) / 1fr;
 
       .choose-box{
+        height: 30vh;
         h1{
           font-size: 5rem;
           line-height: 4rem;
