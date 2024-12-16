@@ -645,44 +645,44 @@ footer {
   .marquee-2 {
     margin-top: 5vh;
   }
-  .choose-us{
+  .choose-us {
     margin-top: 15vh;
-    .choose-container{
+    .choose-container {
       grid-template: repeat(4, 1fr) / 1fr;
 
-      .choose-box{
+      .choose-box {
         height: 30vh;
-        h1{
+        h1 {
           font-size: 5rem;
           line-height: 4rem;
         }
-        .choose-icon{
+        .choose-icon {
           height: 4rem;
           width: 4rem;
         }
       }
     }
   }
-  .work-section{
+  .work-section {
     margin-top: 15vh;
-    .work-heading{
-      h1{
+    .work-heading {
+      h1 {
         font-size: 6rem;
-          line-height: 4.5rem;
+        line-height: 4.5rem;
       }
     }
-    .work-container{
+    .work-container {
       grid-template: repeat(4, 1fr) / 1fr;
       gap: 3vh;
-      .work{
+      .work {
         height: 100vh;
       }
     }
   }
-  footer{
-    .footer-content{
+  footer {
+    .footer-content {
       text-align: center;
-      .btn{
+      .btn {
         font-size: 1.5rem;
       }
     }
@@ -701,28 +701,28 @@ footer {
       }
     }
   }
-  .about-section{
-    .about-left{
-      .about-left-content{
-        .btn{
+  .about-section {
+    .about-left {
+      .about-left-content {
+        .btn {
           width: 50%;
         }
       }
     }
   }
-  .choose-us{
-
-      .choose-box{
+  .choose-us {
+    .choose-container {
+      .choose-box {
         height: 30vh;
-        h1{
+        h1 {
           font-size: 3rem;
           line-height: 3rem;
         }
-        .choose-icon{
+        .choose-icon {
           height: 4rem;
           width: 4rem;
         }
       }
     }
   }
-
+}
