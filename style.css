@@ -217,13 +217,13 @@ a {
 /* MARQUEE SECTION */
 .marquee-section {
   margin-top: 20vh;
-  width: 100%;
+  width: 120vw;
   overflow: hidden;
   background-color: #0ab04c;
   transform: rotate(5deg) translateX(-10px);
 
   .marquee {
-    width: 150%;
+    width: 100%;
     padding: 2vh 0vh;
     display: flex;
     gap: 5vh;
